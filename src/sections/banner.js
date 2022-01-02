@@ -7,7 +7,25 @@ import ShapeRight from 'assets/shape-right.png';
 
 export default function Banner() {
   return (
-    <h1>Banner</h1>
+    <section sx={styles.banner} id='home'>
+      <Container sx={styles.banner.container}>
+        <Box sx={styles.banner.contentBox}>
+          <Heading as='h1' variant='heroPrimary'>
+            Get your child coding this winter break!
+          </Heading>
+          <Text as='p' variant='heroSecondary'>
+            One day, they’ll thank you for this head start . Your child’s early
+            accomplishments will inspire and propel them throughout the rest of
+            their lives. So prepare them today with the skills they’ll need for
+            the world of tomorrow.
+          </Text>
+          <Button variant='primary'>Sign me up</Button>
+        </Box>
+        <Box src={styles.banner.imageBox}>
+          <Image src={BannerImg} alt='banner' />
+        </Box>
+      </Container>
+    </section>
   );
 }
 
