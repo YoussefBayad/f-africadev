@@ -13,7 +13,7 @@ export default function Logo({ src, ...rest }) {
         mr: 15,
       }}
       {...rest}>
-      <Image src={src} alt='fouzia logo' />
+      <Image src={src} alt='kids code logo' />
     </Link>
   );
 }
