@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 /** @jsx jsx */
-import { jsx, Container, Box, Grid, Text, Heading, Button, Image } from 'theme-ui';
+import {
+  jsx,
+  Container,
+  Box,
+  Grid,
+  Text,
+  Heading,
+  Button,
+  Image,
+} from 'theme-ui';
 import { keyframes } from '@emotion/core';
 import TextFeature from 'components/text-feature';
 import ModalVideo from 'react-modal-video';
@@ -36,8 +45,54 @@ const data = {
 };
 
 export default function ServiceSection() {
+  // modal popup video handler
+  const [videoOpen, setVideoOpen] = useState(false);
+  const handleClick = (e) => {
+    e.preventDefault();
+    setVideoOpen(true);
+  };
   return (
-    <h1>Service Section</h1>
+    <section sx={{ variant: 'section.services' }}>
+      <Container sx={styles.containerBox}>
+        <Box sx={styles.thumbnail}>
+          <Image src={ServiceThumb} alt='Thumbnail' />
+          <Button
+            sx={styles.videoBtn}
+            onClick={handleClick}
+            aria-label='Play Button'>
+            <span>
+              <IoIosPlay />
+            </span>
+          </Button>
+
+          <Box sx={styles.shapeBox}>
+            <Image src={shapePattern} alt='Shape' />
+          </Box>
+        </Box>
+        <Box sx={styles.contentBox}>
+          <TextFeature subTitle={data.subTitle} title={data.title} />
+
+          <Grid sx={styles.grid}>
+            {data.features.map((item) => (
+              <Box sx={styles.card} key={item.id}>
+                <Image src={item.imgSrc} alt={item.altText} sx={styles.icon} />
+
+                <Box sx={styles.wrapper}>
+                  <Heading sx={styles.wrapper.title}>{item.title}</Heading>
+                  <Text sx={styles.wrapper.subTitle}>{item.text}</Text>
+                </Box>
+              </Box>
+            ))}
+          </Grid>
+        </Box>
+      </Container>
+      <ModalVideo
+        channel='youtube'
+        isOpen={videoOpen}
+        videoId='ZNA9rmDsYVE'
+        onClose={() => setVideoOpen(false)}
+      />
+    </section>
   );
 }
 
