@@ -241,6 +241,26 @@ const responsive = {
 
 export default function Package() {
   const { monthly, annual } = packages;
+  const [state, setState] = useState({
+    active: 'monthly',
+    pricingPlan: monthly,
+  });
+
+  const handlePricingPlan = (plan) => {
+    if (plan === 'annual') {
+      setState({
+        ...state,
+        active: 'annual',
+        pricingPlan: annual,
+      });
+    } else {
+      setState({
+        ...state,
+        active: 'monthly',
+        pricingPlan: monthly,
+      });
+    }
+  };
 
   const sliderParams = {
     additionalTransfrom: 0,
@@ -265,9 +285,7 @@ export default function Package() {
     sliderClass: '',
   };
 
-  return (
-    <h1>Package</h1>
-  );
+  return <h1>Package</h1>;
 }
 
 const fadeIn = keyframes`
