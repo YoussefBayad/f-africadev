@@ -2,7 +2,7 @@
 import { jsx, Box, Grid, Container, Image, Heading, Text } from 'theme-ui';
 import { Link } from 'components/link';
 import data from './footer.data';
-import FooterLogo from 'assets/logo.svg';
+import FooterLogo from 'assets/logo.png';
 
 export default function Footer() {
   console.log('date', data);
@@ -25,7 +25,7 @@ export default function Footer() {
         {/* End of footer widgets area */}
         <Box sx={styles.footer.footerBottomArea}>
           <Link path='/'>
-            <Image src={FooterLogo} alt='Logo' />
+            <Image src={FooterLogo} alt='Logo' style={{ height: '60px' }} />
           </Link>
           <Box sx={styles.footer.menus}>
             <nav>
