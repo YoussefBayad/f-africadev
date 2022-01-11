@@ -5,7 +5,7 @@ export default function SEO({
   description = 'startup product landing page',
   author = 'JSM',
   meta,
-  title = 'startup landing title',
+  title = 'kids code title',
 }) {
   const metaData = [
     {
@@ -41,7 +41,7 @@ export default function SEO({
       content: description,
     },
   ].concat(meta);
-  
+
   return (
     <Head>
       <title>{title}</title>

@@ -15,7 +15,7 @@ const data = [
     altText: 'Fast Performance',
     title: 'Fast Performance',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Place holder text place holder text place holder text place holder text place holder text place holder text .',
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const data = [
     altText: 'Partnership deal',
     title: 'Partnership deal',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Place holder text place holder text place holder text place holder text place holder text place holder text .',
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const data = [
     altText: 'Pro Subscription',
     title: 'Pro Subscription',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Place holder text place holder text place holder text place holder text place holder text place holder text .',
   },
   {
     id: 4,
@@ -39,13 +39,13 @@ const data = [
     altText: 'Customer Support',
     title: 'Customer Support',
     text:
-      'Get your blood tests delivered at home collect a sample from the your blood tests.',
+      'Place holder text place holder text place holder text place holder text place holder text place holder text .',
   },
 ];
 
 export default function KeyFeature() {
   return (
-    <section sx={{ variant: 'section.keyFeature' }} id='feature'>
+    <section id='feature' sx={{ variant: 'section.keyFeature' }}>
       <Container>
         <SectionHeader
           slogan='Whats the function'

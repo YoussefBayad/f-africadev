@@ -31,7 +31,7 @@ const data = {
       altText: 'Smart Features',
       title: 'Smart Features',
       text:
-        'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+        'Place holder text place holder text place holder text place holder text place holder text place holder text',
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ const data = {
       altText: 'Secure Contents',
       title: 'Secure Contents',
       text:
-        'Get your blood tests delivered at let home collect sample from the victory of the managements. your blood tests.',
+        'Place holder text place holder text place holder text place holder text place holder text place holder text',
     },
   ],
 };

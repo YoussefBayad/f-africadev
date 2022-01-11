@@ -76,8 +76,8 @@ export default function BlogSection() {
     <section sx={{ variant: 'section.news' }}>
       <Container>
         <SectionHeader
-          slogan="our blog"
-          title="Explore our products for your business solution"
+          slogan='our blog'
+          title='Explore the benefits of getting your kids to code'
         />
 
         <Box sx={styles.carouselWrapper}>
@@ -86,23 +86,22 @@ export default function BlogSection() {
             arrows={false}
             autoPlaySpeed={3000}
             centerMode={false}
-            className=""
-            containerClass="carousel-container"
+            className=''
+            containerClass='carousel-container'
             customButtonGroup={<ButtonGroup />}
-            dotListClass="test"
+            dotListClass='test'
             draggable={true}
             focusOnSelect={false}
             infinite={true}
-            itemClass=""
+            itemClass=''
             keyBoardControl
             minimumTouchDrag={80}
             renderButtonGroupOutside
             renderDotsOutside={false}
             responsive={responsive}
             showDots={false}
-            sliderClass=""
-            slidesToSlide={1}
-          >
+            sliderClass=''
+            slidesToSlide={1}>
             {data.map((item) => (
               <PostCard
                 key={item.id}
