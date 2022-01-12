@@ -26,13 +26,14 @@ export default function Header({ className }) {
             </Link>
           ))}
         </Flex>
-
-        <Button
-          className='donate__btn'
-          variant='secondary'
-          aria-abel='Enroll Now'>
-          Enroll Now
-        </Button>
+        <Link to='pricing'>
+          <Button
+            className='donate__btn'
+            variant='secondary'
+            aria-abel='Enroll Now'>
+            Enroll Now
+          </Button>
+        </Link>
         <MobileDrawer />
       </Container>
     </header>
