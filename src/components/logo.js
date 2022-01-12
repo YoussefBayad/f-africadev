@@ -13,7 +13,7 @@ export default function Logo({ src, ...rest }) {
         mr: 15,
       }}
       {...rest}>
-      <Image src={src} alt='kids code logo' style={{ height: '40px' }} />
+      <Image src={src} alt='kids code logo' style={{ height: '60px' }} />
     </Link>
   );
 }
