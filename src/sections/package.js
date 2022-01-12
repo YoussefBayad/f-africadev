@@ -12,32 +12,32 @@ const packages = {
   monthly: [
     {
       id: 1,
-      name: 'Free Plan',
+      name: 'basic Plan',
       description: 'For Small teams or office',
       buttonText: 'Start free trail',
-      priceWithUnit: '$0',
+      priceWithUnit: '$',
       points: [
         {
           id: 1,
           icon: <IoIosCheckmarkCircle />,
-          text: 'Drag & Drop Builder',
+          text: 'Ultimate access to all course, exercises and assessments',
           isAvailable: true,
         },
         {
           id: 2,
           icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
+          text: 'Access for all kind of exercise corrections with downloads.',
           isAvailable: true,
         },
         {
           id: 3,
-          icon: <IoIosCheckmarkCircle />,
+          icon: <IoIosCloseCircle color='#CED7E1' />,
           text: 'Blog Support Tools',
           isAvailable: true,
         },
         {
           id: 4,
-          icon: <IoIosCloseCircle />,
+          icon: <IoIosCloseCircle color='#CED7E1' />,
           text: 'eCommerce Store ',
           isAvailable: true,
         },
@@ -54,13 +54,13 @@ const packages = {
         {
           id: 1,
           icon: <IoIosCheckmarkCircle />,
-          text: 'Drag & Drop Builder',
+          text: 'Ultimate access to all course, exercises and assessments',
           isAvailable: true,
         },
         {
           id: 2,
           icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
+          text: 'Access for all kind of exercise corrections with downloads.',
           isAvailable: true,
         },
         {
@@ -71,7 +71,7 @@ const packages = {
         },
         {
           id: 4,
-          icon: <IoIosCheckmarkCircle />,
+          icon: <IoIosCloseCircle color='#CED7E1' />,
           text: 'eCommerce Store ',
           isAvailable: true,
         },
@@ -90,13 +90,13 @@ const packages = {
         {
           id: 1,
           icon: <IoIosCheckmarkCircle />,
-          text: 'Drag & Drop Builder',
+          text: 'Ultimate access to all course, exercises and assessments',
           isAvailable: true,
         },
         {
           id: 2,
           icon: <IoIosCheckmarkCircle />,
-          text: "1,000's of Templates",
+          text: 'Access for all kind of exercise corrections with downloads.',
           isAvailable: true,
         },
         {
