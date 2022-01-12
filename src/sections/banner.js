@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
+import { Link } from 'react-scroll';
 import { Container, Box, Heading, Text, Image, Button } from 'theme-ui';
 import BannerImg from 'assets/banner-thumb.png';
 import ShapeLeft from 'assets/shape-left.png';
@@ -19,7 +20,14 @@ export default function Banner() {
             their lives. So prepare them today with the skills they’ll need for
             the world of tomorrow.
           </Text>
-          <Button variant='primary'>Sign me up</Button>
+          <Link
+            to='pricing'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}>
+            <Button variant='primary'>Sign me up</Button>
+          </Link>
         </Box>
         <Box src={styles.banner.imageBox}>
           <Image src={BannerImg} alt='banner' />

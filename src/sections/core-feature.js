@@ -11,7 +11,7 @@ const data = {
   description:
     'Place holder text place holder text place holder text place holder text place holder text place holder text.',
   btnName: 'Get Started',
-  btnURL: '#',
+  btnURL: 'pricing',
 };
 
 export default function CoreFeature() {

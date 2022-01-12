@@ -26,7 +26,7 @@ export default function Header({ className }) {
             </Link>
           ))}
         </Flex>
-        <Link to='pricing'>
+        <Link to='pricing' spy={true} smooth={true} offset={-70} duration={500}>
           <Button
             className='donate__btn'
             variant='secondary'

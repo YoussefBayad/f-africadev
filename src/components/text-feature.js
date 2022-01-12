@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx, Box, Heading, Text, Button, Link } from 'theme-ui';
+import { jsx, Box, Heading, Text, Button } from 'theme-ui';
+import { Link } from 'react-scroll';
 
 export default function TextFeature({
   subTitle,
@@ -26,7 +27,13 @@ export default function TextFeature({
       )}
 
       {btnName && (
-        <Link href={btnURL} variant='default'>
+        <Link
+          to={btnURL}
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          variant='default'>
           <Button variant='primary' aria-label={btnName}>
             {btnName}
           </Button>
