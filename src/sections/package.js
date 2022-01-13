@@ -31,13 +31,13 @@ const packages = {
         },
         {
           id: 3,
-          icon: <IoIosCloseCircle color='#CED7E1' />,
+          icon: <IoIosCloseCircle size='23px' color='#E4E4E4' />,
           text: 'Blog Support Tools',
           isAvailable: true,
         },
         {
           id: 4,
-          icon: <IoIosCloseCircle color='#CED7E1' />,
+          icon: <IoIosCloseCircle size='23px' color='#E4E4E4' />,
           text: 'eCommerce Store ',
           isAvailable: true,
         },
@@ -71,7 +71,7 @@ const packages = {
         },
         {
           id: 4,
-          icon: <IoIosCloseCircle color='#CED7E1' />,
+          icon: <IoIosCloseCircle size='23px' color='#E4E4E4' />,
           text: 'eCommerce Store ',
           isAvailable: true,
         },
