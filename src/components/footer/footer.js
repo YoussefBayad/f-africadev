@@ -5,7 +5,6 @@ import data from './footer.data';
 import FooterLogo from 'assets/logo.png';
 
 export default function Footer() {
-  console.log('date', data);
   return (
     <footer sx={styles.footer}>
       <Container>

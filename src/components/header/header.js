@@ -27,10 +27,7 @@ export default function Header({ className }) {
           ))}
         </Flex>
         <Link to='pricing' spy={true} smooth={true} offset={-70} duration={500}>
-          <Button
-            className='donate__btn'
-            variant='secondary'
-            aria-abel='Enroll Now'>
+          <Button className='donate__btn' variant='secondary'>
             Enroll Now
           </Button>
         </Link>
