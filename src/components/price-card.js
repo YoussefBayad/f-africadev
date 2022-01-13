@@ -1,6 +1,7 @@
 import { Box, Card, Text, Heading, Button } from 'theme-ui';
-import React from 'react';
+import React, { useState } from 'react';
 import List from './list';
+import Paypal from './paypal';
 
 export default function PriceCard({
   data: {
@@ -13,6 +14,8 @@ export default function PriceCard({
     points,
   },
 }) {
+  const [openPaypal, setOpenPaypal] = useState(false);
+
   return (
     <Card
       className={header ? 'package__card active' : 'package__card'}
@@ -27,21 +30,26 @@ export default function PriceCard({
         </Box>
         <List items={points} childStyle={styles.listItem} />
         <Text className='package__price' sx={styles.price}>
-          {priceWithUnit}
+          $ {priceWithUnit}
           <span>/Monthly</span>
         </Text>
         <Box sx={styles.buttonGroup}>
-          <Button variant='primary' aria-label={buttonText}>
+          <Button
+            sx={styles.paypal}
+            variant='primary'
+            aria-label={buttonText}
+            onClick={() => setOpenPaypal(true)}>
             {buttonText}
           </Button>
-          {anotherOption && (
+          {openPaypal && <Paypal amount={priceWithUnit} />}
+          {/* {anotherOption && (
             <Button
               variant='textButton'
               className='free__trail'
               aria-label={anotherOption}>
               {anotherOption}
             </Button>
-          )}
+          )} */}
         </Box>
       </Box>
     </Card>
@@ -152,5 +160,8 @@ const styles = {
       fontSize: ['14px', 1],
       p: '20px 0 0',
     },
+  },
+  paypal: {
+    mb: '40px',
   },
 };

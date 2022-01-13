@@ -1,5 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'theme-ui';
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 import { StickyProvider } from '../contexts/app/app.provider';
 import theme from 'theme';
 import SEO from 'components/seo';
@@ -19,19 +20,25 @@ export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
       <StickyProvider>
-        <Layout>
-          <SEO />
-          <Banner />
-          <KeyFeature />
-          <ServiceSection />
-          <CoreFeature />
-          <WorkFlow />
-          <Package />
-          <TeamSection />
-          <TestimonialCard />
-          <BlogSection />
-          <Subscribe />
-        </Layout>
+        <PayPalScriptProvider
+          options={{
+            'client-id':
+              'AcHeYBj3IcH9mZ385-e3-A8gbMyJubarSLQYRzD8zs9MboG-F4QnI1pi4B952DOzHVlLFOLSj1aCoBKC',
+          }}>
+          <Layout>
+            <SEO />
+            <Banner />
+            <KeyFeature />
+            <ServiceSection />
+            <CoreFeature />
+            <WorkFlow />
+            <Package />
+            <TeamSection />
+            <TestimonialCard />
+            <BlogSection />
+            <Subscribe />
+          </Layout>
+        </PayPalScriptProvider>
       </StickyProvider>
     </ThemeProvider>
   );
