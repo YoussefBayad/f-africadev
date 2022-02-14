@@ -42,7 +42,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'space-between',
     flexWrap: ['wrap', null, null, 'nowrap'],
-    pb: [0, 7, 0, null, 7],
+    pb: [0, 5, 0, null, 5],
   },
   contentBox: {
     flexShrink: 0,
