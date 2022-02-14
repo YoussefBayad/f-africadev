@@ -23,8 +23,6 @@ export default function Services() {
             subTitle={data.subTitle}
             title={data.title}
             description={data.description}
-            btnName={data.btnName}
-            btnURL={data.btnURL}
           />
         </Box>
         <Box sx={styles.thumbnail}>
@@ -50,7 +48,7 @@ const styles = {
     flexShrink: 0,
     px: [0, null, '30px', 0],
     textAlign: ['center', null, null, 'left'],
-    width: '60%',
+    width: ['100%', '90%', '90%', '50%'],
     pb: ['50px', '60px', null, 0],
     mx: ['auto', null, null, 0],
     '.description': {
