@@ -85,7 +85,10 @@ export default {
   },
   section: {
     keyFeature: {
-      pt: ' 100px',
+      pt: ' 40px',
+      pb: '150px',
+    },
+    serviceSection: {
       pb: '150px',
     },
     feature: {
