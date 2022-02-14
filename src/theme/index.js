@@ -85,7 +85,7 @@ export default {
   },
   section: {
     keyFeature: {
-      pt: [8, null, 9, null, null, 10],
+      pt: '40px',
       pb: ['90px', null, 9, null, null, 10, null, '165px'],
     },
     feature: {

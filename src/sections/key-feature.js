@@ -1,63 +1,43 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { Container, Grid } from 'theme-ui';
-import SectionHeader from '../components/section-header';
 import FeatureCardColumn from 'components/feature-card-column.js';
-import Performance from 'assets/key-feature/performance.svg';
-import Partnership from 'assets/key-feature/partnership.svg';
-import Subscription from 'assets/key-feature/subscription.svg';
-import Support from 'assets/key-feature/support.svg';
+import Africa from 'assets/key-feature/africa.png';
+import Contract from 'assets/key-feature/contract.png';
+import Idea from 'assets/key-feature/idea.png';
 
 const data = [
   {
     id: 1,
-    imgSrc: Performance,
+    imgSrc: Africa,
     altText: 'Fast Performance',
-    title: 'Fast Performance',
-    text:
-      'Place holder text place holder text place holder text place holder text place holder text place holder text .',
+    text: 'A great knowledge of Africa and its challenges',
   },
   {
     id: 2,
-    imgSrc: Partnership,
+    imgSrc: Idea,
     altText: 'Partnership deal',
-    title: 'Partnership deal',
-    text:
-      'Place holder text place holder text place holder text place holder text place holder text place holder text .',
+    text: 'A range of innovative services in emerging sectors',
   },
   {
     id: 3,
-    imgSrc: Subscription,
+    imgSrc: Contract,
     altText: 'Pro Subscription',
-    title: 'Pro Subscription',
     text:
-      'Place holder text place holder text place holder text place holder text place holder text place holder text .',
-  },
-  {
-    id: 4,
-    imgSrc: Support,
-    altText: 'Customer Support',
-    title: 'Customer Support',
-    text:
-      'Place holder text place holder text place holder text place holder text place holder text place holder text .',
+      'The guarantee of a reliable partner and a support that fits your needs',
   },
 ];
 
 export default function KeyFeature() {
   return (
-    <section id='feature' sx={{ variant: 'section.keyFeature' }}>
+    <section sx={{ variant: 'section.keyFeature' }}>
       <Container>
-        <SectionHeader
-          slogan='Whats the function'
-          title='Meet the feature product'
-        />
         <Grid sx={styles.grid}>
           {data.map((item) => (
             <FeatureCardColumn
               key={item.id}
               src={item.imgSrc}
               alt={item.altText}
-              title={item.title}
               text={item.text}
             />
           ))}
@@ -69,23 +49,9 @@ export default function KeyFeature() {
 
 const styles = {
   grid: {
-    width: ['100%', '80%', '100%'],
+    width: '100%',
     mx: 'auto',
-    gridGap: [
-      '35px 0',
-      null,
-      '40px 40px',
-      '50px 60px',
-      '30px',
-      '50px 40px',
-      '55px 90px',
-    ],
-    gridTemplateColumns: [
-      'repeat(1,1fr)',
-      null,
-      'repeat(2,1fr)',
-      null,
-      'repeat(4,1fr)',
-    ],
+    gridGap: '100px',
+    gridTemplateColumns: 'repeat(3,1fr)',
   },
 };
