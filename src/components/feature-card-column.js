@@ -51,6 +51,7 @@ const styles = {
       lineHeight: 1.4,
       fontWeight: 700,
       mb: [2, null, 3],
+      mt: '15px',
     },
     subTitle: {
       fontSize: 1,

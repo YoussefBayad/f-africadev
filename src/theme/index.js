@@ -86,7 +86,7 @@ export default {
   section: {
     keyFeature: {
       pt: ' 100px',
-      pb: '105px',
+      pb: '150px',
     },
     feature: {
       pb: [8, null, 9, null, null, 10, null, '170px'],

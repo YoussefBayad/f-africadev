@@ -16,7 +16,7 @@ const data = {
 
 export default function Services() {
   return (
-    <section sx={{ variant: 'section.coreFeature' }}>
+    <section>
       <Container sx={styles.containerBox}>
         <Box sx={styles.contentBox}>
           <TextFeature
@@ -42,7 +42,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'space-between',
     flexWrap: ['wrap', null, null, 'nowrap'],
-    pb: [0, 5, 0, null, 5],
+    pb: '20px',
   },
   contentBox: {
     flexShrink: 0,

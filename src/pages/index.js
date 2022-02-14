@@ -8,7 +8,6 @@ import Banner from '../sections/banner';
 import KeyFeature from '../sections/key-feature';
 import ServiceSection from '../sections/service-section';
 import Services from '../sections/services';
-import TeamSection from '../sections/team-section';
 import TestimonialCard from '../sections/testimonial';
 import BlogSection from '../sections/blog-section';
 import Subscribe from '../sections/subscribe';
@@ -24,7 +23,6 @@ export default function IndexPage() {
           <Services />
           <ServiceSection />
 
-          <TeamSection />
           <TestimonialCard />
           <BlogSection />
           <Subscribe />

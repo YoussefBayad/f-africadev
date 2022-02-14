@@ -13,6 +13,8 @@ const data = [
     title: 'OUR AREAS OF INTERVENTION',
     altText: 'Flag',
     text: `– Public affairs
+
+    
       – Corporate strategy
       – Leaders advisory
       – Marketing and corporate communication
@@ -28,12 +30,8 @@ const data = [
     imgSrc: Group,
     title: 'OUR EXPERTISE',
     altText: 'Group',
-    text: `– Strategic positioning & branding
-    – Lobbying et networking
-    – Communication strategy and media relations
-    – Digital communication
-    – Crisis management
-    – Economic intelligence`,
+    text:
+      '– Strategic positioning & branding – Lobbying et networking  – Communication strategy and media relations – Digital communication Crisis management – Economic intelligence',
   },
   {
     id: 3,
