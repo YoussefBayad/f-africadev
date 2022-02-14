@@ -15,7 +15,7 @@ const data = {
 
 export default function About() {
   return (
-    <section>
+    <section id='about'>
       <Container sx={styles.containerBox}>
         <Box sx={styles.contentBox}>
           <TextFeature
