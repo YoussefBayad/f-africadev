@@ -26,11 +26,11 @@ export default function Header({ className }) {
             </Link>
           ))}
         </Flex>
-        <Link to='pricing' spy={true} smooth={true} offset={-70} duration={500}>
-          <Button className='donate__btn' variant='secondary'>
-            Covid 19 Products
-          </Button>
-        </Link>
+
+        <Button className='donate__btn' variant='secondary'>
+          Covid 19 Products
+        </Button>
+
         <MobileDrawer />
       </Container>
     </header>
@@ -67,6 +67,10 @@ const styles = {
       flexShrink: 0,
       mr: [15, 20, null, null, 0],
       ml: ['auto', null, null, null, 0],
+      display: 'none',
+      '@media screen and (min-width: 1024px)': {
+        display: 'block',
+      },
     },
     '&.sticky': {
       position: 'fixed',
@@ -90,6 +94,7 @@ const styles = {
     '@media screen and (min-width: 1024px)': {
       display: 'block',
     },
+
     a: {
       fontSize: 2,
       fontWeight: 'body',

@@ -10,19 +10,19 @@ const data = [
   {
     id: 1,
     imgSrc: Africa,
-    altText: 'Fast Performance',
+    altText: 'Africa',
     text: 'A great knowledge of Africa and its challenges',
   },
   {
     id: 2,
     imgSrc: Idea,
-    altText: 'Partnership deal',
+    altText: 'Ideas',
     text: 'A range of innovative services in emerging sectors',
   },
   {
     id: 3,
     imgSrc: Contract,
-    altText: 'Pro Subscription',
+    altText: 'Contract',
     text:
       'The guarantee of a reliable partner and a support that fits your needs',
   },
@@ -52,6 +52,6 @@ const styles = {
     width: '100%',
     mx: 'auto',
     gridGap: '100px',
-    gridTemplateColumns: 'repeat(3,1fr)',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 2fr))',
   },
 };
