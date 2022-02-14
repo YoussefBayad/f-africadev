@@ -4,15 +4,15 @@ export default [
     label: 'Home',
   },
   {
-    path: 'feature',
-    label: 'Features',
+    path: 'about',
+    label: 'About Us',
   },
   {
-    path: 'pricing',
-    label: 'Pricing',
+    path: 'services',
+    label: 'Services',
   },
   {
-    path: 'testimonial',
-    label: 'Testimonial',
+    path: 'Contact',
+    label: 'Contact',
   },
 ];

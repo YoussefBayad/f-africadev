@@ -59,7 +59,8 @@ const styles = {
     position: 'absolute',
     top: 0,
     left: 0,
-    backgroundColor: 'transparent',
+    backgroundColor: 'background',
+    color: '#000000',
     transition: 'all 0.4s ease',
     animation: `${positionAnim} 0.4s ease`,
     '.donate__btn': {
