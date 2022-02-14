@@ -3,7 +3,6 @@ import { jsx, Container, Box, Image } from 'theme-ui';
 import TextFeature from 'components/text-feature';
 
 import servicesThumb from 'assets/services.jpeg';
-import shapePattern from 'assets/shape-pattern2.png';
 
 const data = {
   subTitle: 'OUR Services',
@@ -27,9 +26,6 @@ export default function Services() {
         </Box>
         <Box sx={styles.thumbnail}>
           <Image src={servicesThumb} alt='Thumbnail' />
-          <Box sx={styles.shapeBox}>
-            <Image src={shapePattern} alt='Shape' />
-          </Box>
         </Box>
       </Container>
     </section>
@@ -64,13 +60,7 @@ const styles = {
       position: 'relative',
       zIndex: 1,
       height: [310, 'auto'],
+      borderRadius: '10px',
     },
-  },
-  shapeBox: {
-    position: 'absolute',
-    bottom: -65,
-    right: -165,
-    zIndex: -1,
-    display: ['none', 'inline-block', 'none', null, 'inline-block'],
   },
 };

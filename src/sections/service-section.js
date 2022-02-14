@@ -14,7 +14,7 @@ const data = [
     altText: 'Flag',
     text: `– Public affairs
 
-    
+
       – Corporate strategy
       – Leaders advisory
       – Marketing and corporate communication
@@ -64,7 +64,7 @@ const data = [
 
 export default function KeyFeature() {
   return (
-    <section>
+    <section sx={{ variant: 'section.serviceSection' }}>
       <Container>
         <Box sx={styles.flex}>
           {data.map((item) => (
