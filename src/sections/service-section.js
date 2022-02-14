@@ -12,53 +12,74 @@ const data = [
     imgSrc: Flag,
     title: 'OUR AREAS OF INTERVENTION',
     altText: 'Flag',
-    text: `– Public affairs
-
-
-      – Corporate strategy
-      – Leaders advisory
-      – Marketing and corporate communication
-      – Corporate organization (HR, IS, Quality, Training …)
-      – Investment advisory and Entrepreneurship
-      – Development of business opportunities
-      – Project Management
-      – Intermediation
-    `,
+    text: [
+      '– Public affairs',
+      '– Corporate strategy',
+      '– Leaders advisory',
+      '– Marketing and corporate communication',
+      '– Corporate organization (HR, IS, Quality, Training …)',
+      '– Investment advisory and Entrepreneurship',
+      '– Development of business opportunities',
+      '– Project Management',
+      '– Intermediation',
+    ],
   },
   {
     id: 2,
     imgSrc: Group,
     title: 'OUR EXPERTISE',
     altText: 'Group',
-    text:
-      '– Strategic positioning & branding – Lobbying et networking  – Communication strategy and media relations – Digital communication Crisis management – Economic intelligence',
+    text: [
+      '– Public affairs',
+      '– Corporate strategy',
+      '– Leaders advisory',
+      '– Marketing and corporate communication',
+      '– Corporate organization (HR, IS, Quality, Training …)',
+      '– Investment advisory and Entrepreneurship',
+      '– Development of business opportunities',
+      '– Project Management',
+      '– Intermediation',
+    ],
+    // text:
+    //   '– Strategic positioning & branding – Lobbying et networking  – Communication strategy and media relations – Digital communication Crisis management – Economic intelligence',
   },
   {
     id: 3,
     imgSrc: Company,
     title: 'WHO WE ADVISE    ',
     altText: 'Company',
-    text: `In Morocco and worldwide we advise :
-    – Institutions
-    – Embassies
-    – Foundations and NGO’s
-    – Professional organizations
-    – Corporations (Global groups, SME’s and very small innovatives companies)
-    
-    The variety of our clients leads us to intervene in different fields such as :
-    
-    – Finance and investment
-    – Human resources
-    – Healthcare
-    – Construction
-    – Education
-    – Finance and Insurance
-    – Industry and Energy
-    – Tourism
-    – Agriculture and food industry
-    – Trade and Crafts
-    – Telecoms and Internet
-    – Research and Training`,
+    text: [
+      '– Public affairs',
+      '– Corporate strategy',
+      '– Leaders advisory',
+      '– Marketing and corporate communication',
+      '– Corporate organization (HR, IS, Quality, Training …)',
+      '– Investment advisory and Entrepreneurship',
+      '– Development of business opportunities',
+      '– Project Management',
+      '– Intermediation',
+    ],
+    // text: `In Morocco and worldwide we advise :
+    // – Institutions
+    // – Embassies
+    // – Foundations and NGO’s
+    // – Professional organizations
+    // – Corporations (Global groups, SME’s and very small innovatives companies)
+
+    // The variety of our clients leads us to intervene in different fields such as :
+
+    // – Finance and investment
+    // – Human resources
+    // – Healthcare
+    // – Construction
+    // – Education
+    // – Finance and Insurance
+    // – Industry and Energy
+    // – Tourism
+    // – Agriculture and food industry
+    // – Trade and Crafts
+    // – Telecoms and Internet
+    // – Research and Training`,
   },
 ];
 
@@ -66,15 +87,23 @@ export default function KeyFeature() {
   return (
     <section sx={{ variant: 'section.serviceSection' }}>
       <Container>
-        <Box sx={styles.flex}>
+        <Box sx={styles.grid}>
           {data.map((item) => (
-            <FeatureCardColumn
-              key={item.id}
-              src={item.imgSrc}
-              alt={item.altText}
-              title={item.title}
-              text={item.text}
-            />
+            <Box>
+              <FeatureCardColumn
+                key={item.id}
+                src={item.imgSrc}
+                alt={item.altText}
+                title={item.title}
+              />
+              <Box sx={styles.text}>
+                {item.text.map((text) => (
+                  <p as='span' key={text}>
+                    {text}
+                  </p>
+                ))}
+              </Box>
+            </Box>
           ))}
         </Box>
       </Container>
@@ -83,11 +112,27 @@ export default function KeyFeature() {
 }
 
 const styles = {
-  flex: {
+  grid: {
     width: '100%',
     mx: 'auto',
-    display: 'flex',
-    justifyContent: 'spaceBetween',
-    alignItems: 'start',
+    display: 'grid',
+    gridGap: '80px',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 2fr))',
+
+    img: {
+      backgroundColor: 'white',
+      width: '100px',
+      height: '100px',
+      borderRadius: 'none',
+      padding: '0',
+      mb: '10px',
+    },
+  },
+  text: {
+    width: '100%',
+    lineHeight: '1',
+    textAlign: 'left',
+    ml: '60px',
+    pl: '20px',
   },
 };
