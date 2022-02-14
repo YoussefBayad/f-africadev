@@ -2,19 +2,19 @@
 import { jsx, Container, Box, Image } from 'theme-ui';
 import TextFeature from 'components/text-feature';
 
-import FeatureThumb from 'assets/core-feature.png';
+import servicesThumb from 'assets/services.jpeg';
 import shapePattern from 'assets/shape-pattern2.png';
 
 const data = {
-  subTitle: 'Core features',
-  title: 'Smart Jackpots that you may love this anytime & anywhere',
+  subTitle: 'OUR Services',
+  title: 'AFRICAN BUSINESS DEVELOPMENT',
   description:
-    'Place holder text place holder text place holder text place holder text place holder text place holder text.',
+    'accompanies its clients in the defining steps of their orientations, organization, development and positioning. To achieve this, we assist them in better understanding their environment, anticipating threats and opportunities, in order to gain an optimal position and influence In a context prone to rapid and sometimes disruptive changes generating multiple uncertainties, trusted advisory gains a decisive importance for leaders. Capitalizing on our breadth of expertise in different fields, we develop activities of high-level consulting to public and private sector in Africa and internationally Adapted to the specificities of Africa and respecting the highest ethical standards, our advisory services and our creative, operational and value-added solutions encourage the emergence of the continent.',
   btnName: 'Get Started',
   btnURL: 'pricing',
 };
 
-export default function CoreFeature() {
+export default function Services() {
   return (
     <section sx={{ variant: 'section.coreFeature' }}>
       <Container sx={styles.containerBox}>
@@ -28,7 +28,7 @@ export default function CoreFeature() {
           />
         </Box>
         <Box sx={styles.thumbnail}>
-          <Image src={FeatureThumb} alt='Thumbnail' />
+          <Image src={servicesThumb} alt='Thumbnail' />
           <Box sx={styles.shapeBox}>
             <Image src={shapePattern} alt='Shape' />
           </Box>
@@ -50,7 +50,7 @@ const styles = {
     flexShrink: 0,
     px: [0, null, '30px', 0],
     textAlign: ['center', null, null, 'left'],
-    width: ['100%', '80%', null, 340, 400, 430, null, 485],
+    width: '60%',
     pb: ['50px', '60px', null, 0],
     mx: ['auto', null, null, 0],
     '.description': {

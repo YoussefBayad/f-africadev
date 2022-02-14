@@ -7,7 +7,7 @@ import Layout from 'components/layout';
 import Banner from '../sections/banner';
 import KeyFeature from '../sections/key-feature';
 import ServiceSection from '../sections/service-section';
-import CoreFeature from '../sections/core-feature';
+import Services from '../sections/services';
 import WorkFlow from '../sections/workflow';
 import TeamSection from '../sections/team-section';
 import TestimonialCard from '../sections/testimonial';
@@ -22,8 +22,8 @@ export default function IndexPage() {
           <SEO />
           <Banner />
           <KeyFeature />
+          <Services />
           <ServiceSection />
-          <CoreFeature />
           <WorkFlow />
           <TeamSection />
           <TestimonialCard />
