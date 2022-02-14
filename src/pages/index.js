@@ -10,8 +10,6 @@ import ServiceSection from '../sections/service-section';
 import Services from '../sections/services';
 import About from '../sections/about';
 import TestimonialCard from '../sections/testimonial';
-import BlogSection from '../sections/blog-section';
-import Subscribe from '../sections/subscribe';
 
 export default function IndexPage() {
   return (
@@ -25,8 +23,6 @@ export default function IndexPage() {
           <ServiceSection />
           <About />
           <TestimonialCard />
-          <BlogSection />
-          <Subscribe />
         </Layout>
       </StickyProvider>
     </ThemeProvider>
