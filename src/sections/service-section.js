@@ -30,18 +30,12 @@ const data = [
     title: 'OUR EXPERTISE',
     altText: 'Group',
     text: [
-      '– Public affairs',
-      '– Corporate strategy',
-      '– Leaders advisory',
-      '– Marketing and corporate communication',
-      '– Corporate organization (HR, IS, Quality, Training …)',
-      '– Investment advisory and Entrepreneurship',
-      '– Development of business opportunities',
-      '– Project Management',
-      '– Intermediation',
+      '– Strategic positioning & branding',
+      '– Lobbying et networking',
+      '– Communication strategy and media relations',
+      '– Digital communication Crisis management',
+      '– Economic intelligence',
     ],
-    // text:
-    //   '– Strategic positioning & branding – Lobbying et networking  – Communication strategy and media relations – Digital communication Crisis management – Economic intelligence',
   },
   {
     id: 3,
@@ -49,37 +43,26 @@ const data = [
     title: 'WHO WE ADVISE    ',
     altText: 'Company',
     text: [
-      '– Public affairs',
-      '– Corporate strategy',
-      '– Leaders advisory',
-      '– Marketing and corporate communication',
-      '– Corporate organization (HR, IS, Quality, Training …)',
-      '– Investment advisory and Entrepreneurship',
-      '– Development of business opportunities',
-      '– Project Management',
-      '– Intermediation',
+      'In Morocco and worldwide we advise :',
+      '– Institutions',
+      '– Embassies',
+      '– Foundations and NGO’s',
+      '– Professional organizations',
+      '– Corporations (Global groups, SME’s and very small innovative companies)',
+      'The variety of our clients leads us to intervene in different fields such as :',
+      '– Finance and investment',
+      '– Human resources',
+      '– Healthcare',
+      '– Construction',
+      '– Education',
+      '– Finance and Insurance',
+      '– Industry and Energy',
+      '– Tourism',
+      '– Agriculture and food industry',
+      '– Trade and Crafts',
+      '– Telecoms and Internet',
+      '– Research and Training',
     ],
-    // text: `In Morocco and worldwide we advise :
-    // – Institutions
-    // – Embassies
-    // – Foundations and NGO’s
-    // – Professional organizations
-    // – Corporations (Global groups, SME’s and very small innovatives companies)
-
-    // The variety of our clients leads us to intervene in different fields such as :
-
-    // – Finance and investment
-    // – Human resources
-    // – Healthcare
-    // – Construction
-    // – Education
-    // – Finance and Insurance
-    // – Industry and Energy
-    // – Tourism
-    // – Agriculture and food industry
-    // – Trade and Crafts
-    // – Telecoms and Internet
-    // – Research and Training`,
   },
 ];
 
@@ -97,8 +80,8 @@ export default function KeyFeature() {
                 title={item.title}
               />
               <Box sx={styles.text}>
-                {item.text.map((text) => (
-                  <p as='span' key={text}>
+                {item.text.map((text, i) => (
+                  <p as='span' key={i}>
                     {text}
                   </p>
                 ))}
