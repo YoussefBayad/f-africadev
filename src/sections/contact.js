@@ -2,22 +2,32 @@ import React from 'react';
 import { Container, Box } from 'theme-ui';
 import contact from 'assets/contact.svg';
 import ContactForm from '../components/contactForm';
+import TextFeature from '../components/text-feature';
 
-export const Contact = () => (
+const data = {
+  subTitle: 'Contact Us',
+  title: 'AFRICAN BUSINESS DEVELOPMENT',
+};
+const Contact = () => (
   <section id='contact'>
-    <Container sx={styles.wrapper}>
-      <Box sx={styles.details}>
-        <ContactForm />
-      </Box>
-      <Box sx={styles.thumbnail}>
-        <img
-          src={contact}
-          alt='I’m John and I’m a Backend & Devops engineer!'
-        />
+    <Container>
+      <TextFeature subTitle={data.subTitle} title={data.title} />{' '}
+      <Box sx={styles.wrapper}>
+        <Box sx={styles.details}>
+          <ContactForm />
+        </Box>
+        <Box sx={styles.thumbnail}>
+          <img
+            src={contact}
+            alt='I’m John and I’m a Backend & Devops engineer!'
+          />
+        </Box>
       </Box>
     </Container>
   </section>
 );
+
+export default Contact;
 
 const styles = {
   wrapper: {

@@ -9,6 +9,7 @@ import KeyFeature from '../sections/key-feature';
 import ServiceSection from '../sections/service-section';
 import Services from '../sections/services';
 import About from '../sections/about';
+import Contact from '../sections/contact';
 import TestimonialCard from '../sections/testimonial';
 
 export default function IndexPage() {
@@ -23,6 +24,7 @@ export default function IndexPage() {
           <ServiceSection />
           <About />
           <TestimonialCard />
+          <Contact />
         </Layout>
       </StickyProvider>
     </ThemeProvider>

@@ -1,14 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 import { Formik, Form, FastField, ErrorMessage } from 'formik';
-import Recaptcha from 'react-google-recaptcha';
+// import Recaptcha from 'react-google-recaptcha';
 import * as Yup from 'yup';
-import { Button, Input } from 'components/common';
+import Button from './form/button';
+import Input from './form/input';
+import Error from './form/error';
 import { Box } from 'theme-ui';
 
 const ContactForm = () => {
-  const Error = () => <Box as='span' sx={styles.error}></Box>;
-
   return (
     <Formik
       initialValues={{
@@ -33,7 +33,7 @@ const ContactForm = () => {
         try {
           await axios({
             method: 'POST',
-            url: `${process.env.GATSBY_PORTFOLIO_FORMIK_ENDPOINT}`,
+            url: `${process.env.FORMIK_ENDPOINT}`,
             headers: {
               'Content-Type': 'application/json',
             },
@@ -82,7 +82,7 @@ const ContactForm = () => {
           <Box sx={styles.inputField}>
             <Input
               as={FastField}
-              component='textarea'
+              as='textarea'
               aria-label='message'
               id='message'
               rows='8'
@@ -93,17 +93,17 @@ const ContactForm = () => {
             />
             <ErrorMessage component={Error} name='message' />
           </Box>
-          {values.name && values.email && values.message && (
+          {/* {values.name && values.email && values.message && (
             <Box sx={styles.inputField}>
               <FastField
                 component={Recaptcha}
-                sitekey={process.env.GATSBY_PORTFOLIO_RECAPTCHA_KEY}
+                sitekey={process.env.RECAPTCHA_KEY}
                 name='recaptcha'
                 onChange={(value) => setFieldValue('recaptcha', value)}
               />
               <ErrorMessage component={Error} name='recaptcha' />
             </Box>
-          )}
+          )} */}
           {values.success && (
             <Box sx={styles.inputField}>
               <Box sx={styles.center}>
@@ -126,7 +126,6 @@ const ContactForm = () => {
 };
 
 const styles = {
-  error: { color: '#ff4136' },
   center: {
     textAlign: 'left',
 
@@ -140,3 +139,5 @@ const styles = {
     marginBottom: '1rem',
   },
 };
+
+export default ContactForm;

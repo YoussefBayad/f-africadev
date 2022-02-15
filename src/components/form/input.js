@@ -1,7 +1,7 @@
 import { Input } from 'theme-ui';
 
-export default (props) => {
-  return <Input {...props} sx={styles} />;
+export default ({ error, ...rest }) => {
+  return <Input {...rest} sx={error ? styles && styles.error : styles} />;
 };
 
 const styles = {
@@ -14,7 +14,7 @@ const styles = {
   marginBottom: '0.5rem',
   transition: '0.3s',
 
-  '&:error': {
+  error: {
     borderColor: '#ff4136',
   },
 
