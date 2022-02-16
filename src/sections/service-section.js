@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui';
 import { Container, Box } from 'theme-ui';
 import FeatureCardColumn from 'components/feature-card-column.js';
+import ShowMoreText from "react-show-more-text";
 import Group from 'assets/services/group.png';
 import Flag from 'assets/services/flag.png';
 import Company from 'assets/services/company.png';
@@ -80,12 +81,26 @@ export default function KeyFeature() {
                 title={item.title}
               />
               <Box sx={styles.text}>
+              <ShowMoreText
+              lines={5}
+              className=''
+              more="Show more"
+              less="Show less"
+              sx={styles.showMore}
+              expanded={false}
+              width={280}
+              truncatedEndingComponent={"..."}
+              >
+              
                 {item.text.map((text, i) => (
-                  <p as='span' key={i}>
+                  <Box  key={i}>
                     {text}
-                  </p>
+                  </Box>
                 ))}
+               
+                </ShowMoreText>
               </Box>
+
             </Box>
           ))}
         </Box>
@@ -101,7 +116,12 @@ const styles = {
     display: 'grid',
     gridGap: '80px',
     gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 2fr))',
-
+     a:{
+      underline:'none',
+      color:'secondary',
+      display:'block',
+      mt:'10px',
+    },
     img: {
       backgroundColor: 'white',
       width: '100px',
@@ -117,4 +137,6 @@ const styles = {
     textAlign: 'left',
     ml: '40px',
   },
+ 
+  
 };
