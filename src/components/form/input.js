@@ -1,8 +1,8 @@
-import { Input } from 'theme-ui';
+import { Input, Textarea } from 'theme-ui';
 
-export default ({ error, ...rest }) => {
-  return <Input {...rest} sx={error ? styles && styles.error : styles} />;
-};
+export default ({ error, ...rest }) => (
+  <Input {...rest} sx={error ? styles && styles.error : styles} />
+);
 
 const styles = {
   width: ' 100%',

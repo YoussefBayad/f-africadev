@@ -1,7 +1,11 @@
 import { Button } from 'theme-ui';
 
-export default (props) => {
-  return <Button {...props} sx={styles}></Button>;
+export default ({ disabled, children }) => {
+  return (
+    <Button type='submit' disabled={disabled} sx={styles}>
+      {children}
+    </Button>
+  );
 };
 const styles = {
   cursor: 'pointer',
@@ -18,11 +22,10 @@ const styles = {
   color: ' #fff',
   background: 'accent',
 
+  '&:hover': {
+    boxShadow: '#b39573 0px 12px 24px -10px',
+  },
   '&:focus': {
     outline: 'none',
-  },
-
-  '&:disabled': {
-    background: 'gray',
   },
 };

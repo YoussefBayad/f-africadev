@@ -96,11 +96,11 @@ export default function KeyFeature() {
 
 const styles = {
   grid: {
-    width: '100%',
+    width: '80%',
     mx: 'auto',
     display: 'grid',
     gridGap: '80px',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 2fr))',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 2fr))',
 
     img: {
       backgroundColor: 'white',
@@ -115,7 +115,6 @@ const styles = {
     width: '100%',
     lineHeight: '1',
     textAlign: 'left',
-    ml: '60px',
-    pl: '20px',
+    ml: '40px',
   },
 };

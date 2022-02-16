@@ -6,9 +6,12 @@ import * as Yup from 'yup';
 import Button from './form/button';
 import Input from './form/input';
 import Error from './form/error';
-import { Box } from 'theme-ui';
+import { Box, Textarea } from 'theme-ui';
 
 const ContactForm = () => {
+  const submitHandler = () => {
+    console.log('diss');
+  };
   return (
     <Formik
       initialValues={{
@@ -26,32 +29,7 @@ const ContactForm = () => {
         message: Yup.string().required('Message field is required'),
         recaptcha: Yup.string().required('Robots are not welcome yet!'),
       })}
-      onSubmit={async (
-        { name, email, message },
-        { setSubmitting, resetForm, setFieldValue }
-      ) => {
-        try {
-          await axios({
-            method: 'POST',
-            url: `${process.env.FORMIK_ENDPOINT}`,
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            data: JSON.stringify({
-              name,
-              email,
-              message,
-            }),
-          });
-          setSubmitting(false);
-          setFieldValue('success', true);
-          setTimeout(() => resetForm(), 6000);
-        } catch (err) {
-          setSubmitting(false);
-          setFieldValue('success', false);
-          alert('Something went wrong, please try again!'); // eslint-disable-line
-        }
-      }}>
+      onSubmit={submitHandler}>
       {({ values, touched, errors, setFieldValue, isSubmitting }) => (
         <Form>
           <Box sx={styles.inputField}>
@@ -79,20 +57,21 @@ const ContactForm = () => {
             />
             <ErrorMessage component={Error} name='email' />
           </Box>
-          <Box sx={styles.inputField}>
-            <Input
+          {/* <Box sx={styles.inputField}>
+            <input
               as={FastField}
-              as='textarea'
+              sx={styles.input}
+              component='textarea'
               aria-label='message'
               id='message'
+              type='textarea'
               rows='8'
-              type='text'
               name='message'
               placeholder='Message*'
               error={touched.message && errors.message}
             />
             <ErrorMessage component={Error} name='message' />
-          </Box>
+          </Box> */}
           {/* {values.name && values.email && values.message && (
             <Box sx={styles.inputField}>
               <FastField
@@ -115,9 +94,7 @@ const ContactForm = () => {
             </Box>
           )}
           <Box sx={styles.center}>
-            <Button secondary type='submit' disabled={isSubmitting}>
-              Submit
-            </Button>
+            <Button>Submit</Button>
           </Box>
         </Form>
       )}
@@ -126,6 +103,24 @@ const ContactForm = () => {
 };
 
 const styles = {
+  input: {
+    width: ' 100%',
+    boxSizing: 'border-box',
+    border: '2px solid ',
+    borderColor: 'accent',
+    padding: ' 0.8rem 1rem',
+    borderRadius: '7px',
+    marginBottom: '0.5rem',
+    transition: '0.3s',
+
+    error: {
+      borderColor: '#ff4136',
+    },
+
+    '&:placeholder': {
+      color: '#a7a7a7',
+    },
+  },
   center: {
     textAlign: 'left',
 
