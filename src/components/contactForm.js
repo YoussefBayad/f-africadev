@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Formik, Form, FastField, ErrorMessage } from "formik";
+import { Formik, Form, Field, FastField, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Button from "./form/button";
 import Input from "./form/input";
@@ -86,13 +86,13 @@ const ContactForm = () => {
           </Box>
           {
             <Box sx={styles.inputField}>
-              <Input
-                as={FastField}
-                component="textarea"
+              <Field
+                as="textarea"
+                className="text__area"
                 aria-label="message"
                 id="message"
                 rows="8"
-                type="textarea "
+                // type="textarea"
                 name="message"
                 placeholder="Message*"
                 error={touched.message && errors.message}
@@ -139,6 +139,7 @@ const styles = {
       color: "#a7a7a7",
     },
   },
+
   center: {
     textAlign: "left",
 
@@ -150,6 +151,24 @@ const styles = {
   inputField: {
     position: "relative",
     marginBottom: "1rem",
+    ".text__area": {
+      width: " 100%",
+      boxSizing: "border-box",
+      border: "2px solid ",
+      borderColor: "accent",
+      padding: " 0.8rem 1rem",
+      borderRadius: "7px",
+      marginBottom: "0.5rem",
+      transition: "0.3s",
+      outlineColor: "accent",
+      error: {
+        borderColor: "#ff4136",
+      },
+
+      "&:placeholder": {
+        color: "#a7a7a7",
+      },
+    },
   },
 };
 
