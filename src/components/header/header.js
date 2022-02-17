@@ -28,6 +28,7 @@ export default function Header({ className }) {
           ))}
         </Flex>
         <a
+          className="covid__link"
           target="_blank"
           href="http://afrikadev.com/wp-content/uploads/2020/06/Protection-products-eng-version-1-1.pdf"
         >
@@ -67,6 +68,9 @@ const styles = {
     color: "#000000",
     transition: "all 0.4s ease",
     animation: `${positionAnim} 0.4s ease`,
+    ".covid__link": {
+      textDecoration: "none",
+    },
     ".donate__btn": {
       flexShrink: 0,
       mr: [15, 20, null, null, 0],
@@ -76,13 +80,7 @@ const styles = {
         display: "block",
       },
     },
-    a: {
-      textDecoration: "none",
-      color: "accent",
-      "&:hover": {
-        color: "white",
-      },
-    },
+
     "&.sticky": {
       position: "fixed",
       backgroundColor: "background",
@@ -107,6 +105,7 @@ const styles = {
     },
 
     a: {
+      textDecoration: "none",
       fontSize: 2,
       fontWeight: "body",
       px: 5,

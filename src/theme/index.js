@@ -285,7 +285,6 @@ export default {
       bg: "transparent",
       padding: ["10px 15px", null, "15px 30px"],
       "&:hover": {
-        a: { color: "white" },
         color: "white",
         bg: "primary",
       },
