@@ -1,54 +1,53 @@
-import Chat from 'assets/widget/chat.svg';
-import Community from 'assets/widget/community.svg';
-import Github from 'assets/widget/github.svg';
+import Chat from "assets/widget/chat.svg";
+import Community from "assets/widget/community.svg";
+import Linkedin from "assets/widget/linkedin.svg";
 
 export default {
   widgets: [
     {
       id: 1,
-      iconSrc: Chat,
-      altText: 'Community',
-      title: 'Join the Community',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.',
+      iconSrc: Community,
+      altText: "chat",
+      title: "Contact Me",
+      description: " + 212 661 31 47 77",
     },
     {
       id: 2,
-      iconSrc: Community,
-      altText: 'Chat',
-      title: 'Chat Communication',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.',
+      iconSrc: Chat,
+      altText: "Email",
+      title: "Email Communication",
+      description: "contact@afrikadev.com",
     },
     {
       id: 3,
-      iconSrc: Github,
-      altText: 'Github',
-      title: 'Github Access',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.',
+      iconSrc: Linkedin,
+      altText: "LinkedIn",
+      title: "LinkedIn",
+      a: "https://www.linkedin.com/company/african-business-development/",
     },
   ],
   menuItem: [
     {
-      path: '/',
-      label: 'Home',
+      path: "/",
+      label: "Home",
+    },
+
+    {
+      path: "#about",
+      label: "About",
+    },
+
+    {
+      path: "#contact",
+      label: "Contact",
     },
     {
-      path: '/',
-      label: 'Adversite',
+      path: "https://www.facebook.com/africanbusinessdevelopment/",
+      label: "Facebook",
     },
     {
-      path: '/',
-      label: 'Supports',
-    },
-    {
-      path: '/',
-      label: 'Marketing',
-    },
-    {
-      path: '/',
-      label: 'Contact',
+      path: "https://www.linkedin.com/company/african-business-development/",
+      label: "LinkedIn",
     },
   ],
 };
