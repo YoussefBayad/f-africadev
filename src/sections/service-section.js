@@ -82,7 +82,7 @@ export default function KeyFeature() {
               />
               <Box sx={styles.text}>
               <ShowMoreText
-              lines={5}
+              lines={4}
               className=''
               more="Show more"
               less="Show less"
